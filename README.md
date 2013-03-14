@@ -18,11 +18,11 @@ Rails 4 ships with an updated version of Sprockets that supports bower's `compon
 gem 'sprockets', '2.2.2.backport1'
 ```
 
-The gem includes a generator that setup your project:
+The gem includes a generator that sets up your project:
 
     rails generate bower:install
 
-This will install a `.bowerrc` file to your projects root directory. It will also configure bower's components to be installed to `components/` which will be automatically added to the Asset Pipeline's asset paths. So you can modify `components/component.json` then use bower as you would in any other project.
+This will install a `.bowerrc` file to your project's root directory. It will also configure bower's components to be installed to `components/` which will be automatically added to the Asset Pipeline's asset paths. Add your project's dependencies to `components/component.json` then use bower (`bower install`, etc.) as you would in any other project.
 
 ### Non-Rails Projects
 
@@ -38,7 +38,7 @@ environment.append_path Bower.environment.directory
 
 ## How this gem differs from other techniques
 
-For Rails apps, integrating components into `lib/assets` and/or `vendor/assets` seems like the wrong approach. Since bower can support multiple searchpaths, the need to make distinction between external dependencies and frameworks does not exist. It can all be managed using bower. Instead, this gem's setting install components to `components/` in your project's root.
+For Rails apps, integrating bower components into `lib/assets` and/or `vendor/assets` seems like the wrong approach. Since bower can support multiple searchpaths, the need to make distinction between external dependencies and frameworks does not exist. It can all be managed in once place. Instead, this gem's setting installs components to `components/` in your project's root.
 
 ## TODO
 
