@@ -1,6 +1,6 @@
 # Bower
 
-Bower integration for your ruby apps.
+[Bower](http://twitter.github.com/bower/) integration for your ruby apps.
 
 ## Usage with Sprockets
 
