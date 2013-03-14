@@ -1,0 +1,7 @@
+{
+  "name": "bower_gem_test",
+  "version": "1.0.0",
+  "dependencies": {
+    "ember": "*"
+  }
+}
