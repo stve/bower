@@ -18,7 +18,11 @@ Rails 4 ships with an updated version of Sprockets that supports bower's `compon
 gem 'sprockets', '2.2.2.backport1'
 ```
 
-The gem includes a generator that will install a `.bowerrc` file to your projects root directory and will configure bower's components to be installed in `components/` which will be automatically added to the Asset Pipeline's asset paths. The gem also includes rake tasks for installing and updating components. So you can modify `components/component.json` then use bower as you would in any other project.
+The gem includes a generator that setup your project:
+
+    rails generate bower:install
+
+This will install a `.bowerrc` file to your projects root directory. It will also configure bower's components to be installed to `components/` which will be automatically added to the Asset Pipeline's asset paths. So you can modify `components/component.json` then use bower as you would in any other project.
 
 ### Non-Rails Projects
 
