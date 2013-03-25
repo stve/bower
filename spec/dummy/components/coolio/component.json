@@ -1,0 +1,9 @@
+{
+  "name": "coolio",
+  "version": "1.0.0",
+  "main": [
+    "./coolio.js"
+  ],
+  "dependencies": {
+  }
+}
