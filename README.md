@@ -50,7 +50,9 @@ environment.append_path Bower.environment.directory
 
 ## How this gem differs from other techniques
 
-For Rails apps, integrating bower components into `lib/assets` and/or `vendor/assets` seems like the wrong approach. Since bower can support multiple searchpaths, the need to make a distinction between external dependencies and frameworks does not exist. It can all be managed in once place. This gem takes a more opinionated approach and installs components to `components/` in your project's root by default. You can always change it someplace
+For Rails apps, integrating bower components into `lib/assets` and/or `vendor/assets` seems like the wrong approach. Since bower can support multiple searchpaths, the need to make a distinction between external dependencies and frameworks does not exist. It can all be managed in once place. This gem takes a more opinionated approach and installs components to `components/` in your project's root by default. You can always change it to another location.
+
+If this approach isn't to your liking, you may want to take a look at [`bower-rails`](https://github.com/rharriso/bower-rails/).
 
 ## TODO
 
@@ -58,7 +60,7 @@ When used with Sprockets, you still need to use a `require` directive in order t
 
 ## Contributing
 
-Pull requests welcome: fork, make a topic branch, commit (squash when possible) *with tests* and I'll happily consider.
+Pull requests welcome: fork, make a topic branch, commit (squash when possible) *with tests* and I'll happily consider merging your contributions.
 
 ## Copyright
 
