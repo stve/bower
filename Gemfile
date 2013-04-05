@@ -16,7 +16,8 @@ group :test do
   gem 'jquery-rails'
   gem "sprockets", "2.2.2.backport1"
   gem 'rails', '~> 3.2.12'
-  gem 'sqlite3'
+  gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
+  gem "jdbc-sqlite3", :platform => :jruby
   gem 'generator_spec'
   gem 'simplecov', :require => false
 end
