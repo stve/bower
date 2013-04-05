@@ -1,6 +1,10 @@
 # Bower
 
-[Bower](http://twitter.github.com/bower/) integration for your ruby apps.
+[![Gem Version](https://badge.fury.io/rb/bower.png)][gem]
+[![Build Status](https://travis-ci.org/spagalloco/bower.png?branch=master)][travis]
+
+[gem]: https://rubygems.org/gems/bower
+[travis]: http://travis-ci.org/spagalloco/bower
 
 ## Usage with Sprockets
 
