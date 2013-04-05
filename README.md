@@ -6,6 +6,8 @@
 [gem]: https://rubygems.org/gems/bower
 [travis]: http://travis-ci.org/spagalloco/bower
 
+[Bower](http://twitter.github.com/bower/) integration for your ruby apps.
+
 ## Usage with Sprockets
 
 ### Rails
