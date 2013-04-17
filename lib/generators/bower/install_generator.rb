@@ -8,11 +8,11 @@ module Bower
       desc "Creates a local configuration file and the default JSON file for Bower to use in your application."
 
       def create_components_directory
-        empty_directory 'components/javascripts'
+        empty_directory 'bower_components'
       end
 
       def copy_component_json
-        copy_file 'component.json', 'components/javascripts/component.json'
+        copy_file 'bower.json', 'bower.json'
       end
 
       def copy_config

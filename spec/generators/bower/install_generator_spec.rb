@@ -11,11 +11,11 @@ describe Bower::Generators::InstallGenerator do
   end
 
   it 'creates a component directory' do
-    assert_directory 'components/javascripts'
+    assert_directory 'bower_components'
   end
 
   it "creates a template component.json" do
-    assert_file "components/javascripts/component.json"
+    assert_file "bower.json"
   end
 
   it "creates a configuration file" do

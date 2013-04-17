@@ -8,6 +8,8 @@
 
 [Bower](http://twitter.github.com/bower/) integration for your ruby apps.
 
+**Note:** Bower's development is in a state of flux as they migrate to new conventions. Development of this library will stay in lock-step with the Bower spec, but no new releases will occur until the spec stabilizes and Sprockets support is complete as well.
+
 ## Usage with Sprockets
 
 ### Rails
@@ -18,7 +20,7 @@ Add `bower` to your application's Gemfile:
 gem 'bower'
 ```
 
-Rails 4 ships with an updated version of Sprockets that supports bower's `component.json` file. If you are running, Rails 3, then you need to require Sprockets [`2.2.2.backport1`](http://rubygems.org/gems/sprockets/versions/2.2.2.backport1):
+Rails 4 ships with an updated version of Sprockets that supports bower's `bower.json` file. If you are running, Rails 3, then you need to require Sprockets [`2.2.2.backport1`](http://rubygems.org/gems/sprockets/versions/2.2.2.backport1):
 
 ```ruby
 gem 'sprockets', '2.2.2.backport1'
@@ -32,15 +34,15 @@ This will install a `.bowerrc` file to your project's root directory that looks 
 
 ```json
 {
-  "directory"  : "components",
-  "json"       : "components/component.json",
+  "directory"  : "bower_components",
+  "json"       : "bower.json",
   "endpoint"   : "https://bower.herokuapp.com",
   "searchpath" : []
 }
 
 ```
 
-Add your dependencies to `components/component.json` then use bower (`bower install`, etc.) as you would in any other project.
+Add your dependencies to `bower.json` then use bower (`bower install`, etc.) as you would in any other project.
 
 ### Non-Rails Projects
 
@@ -56,7 +58,7 @@ environment.append_path Bower.environment.directory
 
 ## How this gem differs from other techniques
 
-For Rails apps, integrating bower components into `lib/assets` and/or `vendor/assets` seems like the wrong approach. Since bower can support multiple searchpaths, the need to make a distinction between external dependencies and frameworks does not exist. It can all be managed in once place. This gem takes a more opinionated approach and installs components to `components/` in your project's root by default. You can always change it to another location.
+For Rails apps, integrating bower components into `lib/assets` and/or `vendor/assets` seems like the wrong approach. Since bower can support multiple searchpaths, the need to make a distinction between external dependencies and frameworks does not exist. It can all be managed in once place. This gem takes a more opinionated approach and installs components to `bower_components/` in your project's root by default. You can always change it to another location.
 
 If this approach isn't to your liking, you may want to take a look at [`bower-rails`](https://github.com/rharriso/bower-rails/).
 
