@@ -12,7 +12,7 @@ end
 group :test do
   gem 'json', :platforms => :ruby_18
   gem 'rspec-rails'
-  gem 'capybara'
+  gem 'capybara', '~> 2.0'
   gem 'jquery-rails'
   gem "sprockets", "2.2.2.backport1"
   gem 'rails', '~> 3.2.12'
