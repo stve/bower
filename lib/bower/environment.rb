@@ -4,8 +4,8 @@ module Bower
   class Environment
     attr_accessor :directory, :json
 
-    DEFAULT_DIRECTORY = 'components'
-    DEFAULT_JSON      = 'component.json'
+    DEFAULT_DIRECTORY = 'bower_components'
+    DEFAULT_JSON      = 'bower.json'
 
     def self.setup(bowerrc=nil)
       if bowerrc && File.exists?(bowerrc)

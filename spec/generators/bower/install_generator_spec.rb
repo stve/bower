@@ -10,11 +10,11 @@ describe Bower::Generators::InstallGenerator do
     run_generator
   end
 
-  it 'creates a component directory' do
+  it 'creates a bower_components directory' do
     assert_directory 'bower_components'
   end
 
-  it "creates a template component.json" do
+  it "creates a template bower.json" do
     assert_file "bower.json"
   end
 

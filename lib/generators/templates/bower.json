@@ -13,5 +13,6 @@
   "name": "",
   "version": "",
   "main": "",
+  "private": true,
   "dependencies": {}
 }
