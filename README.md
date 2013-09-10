@@ -1,14 +1,7 @@
 # Bower
+[![Gem Version](https://badge.fury.io/rb/bower.png)][gem] [![Build Status](https://travis-ci.org/spagalloco/bower.png?branch=master)][travis]
 
-[![Gem Version](https://badge.fury.io/rb/bower.png)][gem]
-[![Build Status](https://travis-ci.org/spagalloco/bower.png?branch=master)][travis]
-
-[gem]: https://rubygems.org/gems/bower
-[travis]: http://travis-ci.org/spagalloco/bower
-
-[Bower](http://twitter.github.com/bower/) integration for your ruby apps.
-
-**Note:** Bower's development is in a state of flux as they migrate to new conventions. Development of this library will stay in lock-step with the Bower spec, but no new releases will occur until the spec stabilizes and Sprockets support is complete as well.
+[Bower](http://bower.io) integration for your ruby apps.
 
 ## Usage with Sprockets
 
@@ -30,14 +23,12 @@ The gem includes a generator that sets up your project:
 
     rails generate bower:install
 
-This will install a `.bowerrc` file to your project's root directory that looks like this:
+This will install a configuration file (`.bowerrc`) in your project's root. The configuration file tells bower where to install components and where it expects `bower.json`.
 
 ```json
 {
-  "directory"  : "bower_components",
-  "json"       : "bower.json",
-  "endpoint"   : "https://bower.herokuapp.com",
-  "searchpath" : []
+  "cwd"        : "."
+  "directory"  : "bower_components"
 }
 
 ```
@@ -73,3 +64,6 @@ Pull requests welcome: fork, make a topic branch, commit (squash when possible) 
 ## Copyright
 
 Copyright (c) 2013 Steve Agalloco. See [LICENSE](LICENSE.md) for details.
+
+[gem]: https://rubygems.org/gems/bower
+[travis]: http://travis-ci.org/spagalloco/bower
