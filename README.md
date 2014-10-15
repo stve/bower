@@ -1,5 +1,5 @@
 # Bower
-[![Gem Version](https://badge.fury.io/rb/bower.png)][gem] [![Build Status](https://travis-ci.org/spagalloco/bower.png?branch=master)][travis]
+[![Gem Version](https://badge.fury.io/rb/bower.png)][gem] [![Build Status](https://travis-ci.org/stve/bower.png?branch=master)][travis]
 
 [Bower](http://bower.io) integration for your ruby apps.
 
@@ -27,13 +27,12 @@ This will install a configuration file (`.bowerrc`) in your project's root. The 
 
 ```json
 {
-  "cwd"        : "."
   "directory"  : "bower_components"
 }
 
 ```
 
-Add your dependencies to `bower.json` then use bower (`bower install`, etc.) as you would in any other project.
+Add your dependencies to `bower.json` or use `bower install` as you would in any other project.
 
 ### Non-Rails Projects
 
@@ -66,4 +65,4 @@ Pull requests welcome: fork, make a topic branch, commit (squash when possible) 
 Copyright (c) 2013 Steve Agalloco. See [LICENSE](LICENSE.md) for details.
 
 [gem]: https://rubygems.org/gems/bower
-[travis]: http://travis-ci.org/spagalloco/bower
+[travis]: http://travis-ci.org/stve/bower
