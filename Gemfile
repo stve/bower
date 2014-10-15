@@ -10,7 +10,7 @@ end
 
 group :test do
   gem 'json', :platforms => :ruby_18
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.1'
   gem 'capybara', '~> 2.0'
   gem 'jquery-rails'
   gem "sprockets", "2.2.2.backport1"

@@ -20,6 +20,6 @@ describe "usage", :type => :feature do
 
   it "includes bower assets via Sprockets" do
     visit '/assets/application.js'
-    page.should have_content("Coolio = {};")
+    expect(page).to have_content("Coolio = {};")
   end
 end

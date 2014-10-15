@@ -29,7 +29,7 @@ describe Bower::Environment do
     subject { Bower::Environment.new }
 
     it 'invokes "bower update"' do
-      subject.should_receive(:run).with('bower install').and_return(true)
+      expect(subject).to receive(:run).with('bower install').and_return(true)
       subject.install
     end
   end
@@ -38,7 +38,7 @@ describe Bower::Environment do
     subject { Bower::Environment.new }
 
     it 'invokes "bower update"' do
-      subject.should_receive(:run).with('bower update').and_return(true)
+      expect(subject).to receive(:run).with('bower update').and_return(true)
       subject.update
     end
   end
@@ -46,24 +46,24 @@ describe Bower::Environment do
   describe '#run' do
     subject { Bower::Environment.new }
     it 'returns nil when the directory does not exist' do
-      Dir.stub(:exists?).and_return(false)
+      allow(Dir).to receive(:exists?).and_return(false)
 
       expect(subject.send(:run, 'bower update')).to be_nil
     end
 
     it 'returns nil when the component file does not exist' do
-      Dir.stub(:exists?).with(subject.directory).and_return(true)
-      Dir.should_receive(:chdir).with(subject.directory).and_yield
-      File.stub(:exists?).and_return(false)
+      allow(Dir).to receive(:exists?).with(subject.directory).and_return(true)
+      expect(Dir).to receive(:chdir).with(subject.directory).and_yield
+      allow(File).to receive(:exists?).and_return(false)
 
       expect(subject.send(:run, 'bower update')).to be_nil
     end
 
     it 'invokes the shell command wheh the component file exists' do
-      Dir.stub(:exists?).with(subject.directory).and_return(true)
-      Dir.stub(:chdir).with(subject.directory).and_yield
-      File.stub(:exists?).and_return(true)
-      subject.should_receive(:`).and_return
+      allow(Dir).to receive(:exists?).with(subject.directory).and_return(true)
+      allow(Dir).to receive(:chdir).with(subject.directory).and_yield
+      allow(File).to receive(:exists?).and_return(true)
+      expect(subject).to receive(:`)
 
       expect(subject.send(:run, 'bower update')).to be_nil
     end
