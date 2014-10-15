@@ -6,7 +6,7 @@ require 'bower/version'
 Gem::Specification.new do |gem|
   gem.name        = 'bower'
   gem.version     = Bower::VERSION
-  gem.homepage    = 'https://github.com/spagalloco/bower'
+  gem.homepage    = 'https://github.com/stve/bower'
 
   gem.author      = "Steve Agalloco"
   gem.email       = 'steve.agalloco@gmail.com'
