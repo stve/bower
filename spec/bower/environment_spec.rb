@@ -19,10 +19,6 @@ describe Bower::Environment do
     it 'uses a default directory' do
       expect(subject.directory).to eq('bower_components')
     end
-
-    it 'uses a default json' do
-      expect(subject.json).to eq('bower.json')
-    end
   end
 
   describe '#install' do

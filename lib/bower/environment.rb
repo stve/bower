@@ -2,7 +2,8 @@ require 'multi_json'
 
 module Bower
   class Environment
-    attr_accessor :directory, :json
+    attr_accessor :directory
+    attr_reader :json
 
     DEFAULT_DIRECTORY = 'bower_components'
     DEFAULT_JSON      = 'bower.json'
@@ -18,7 +19,7 @@ module Bower
 
     def initialize(config={})
       @directory = config['directory'] || DEFAULT_DIRECTORY
-      @json      = config['json'] || DEFAULT_JSON
+      @json      = DEFAULT_JSON
     end
 
     def install
