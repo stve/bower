@@ -32,7 +32,7 @@ This will install a configuration file (`.bowerrc`) in your project's root. The 
 
 ```
 
-Add your dependencies to `bower.json` or use `bower install` as you would in any other project.
+You can change the destination directory if you like, though putting Bower components under `app/assets/` can cause problems (see [rails/rails#7968](https://github.com/rails/rails/pull/7968)). Add your dependencies to `bower.json` or use `bower install` as you would in any other project.
 
 ### Non-Rails Projects
 
