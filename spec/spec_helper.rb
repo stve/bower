@@ -30,8 +30,11 @@ Rails.backtrace_cleaner.remove_silencers!
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 RSpec.configure do |config|
-  config.fixture_path = File.join(File.dirname(__FILE__), 'fixtures')
   config.mock_with :rspec
   config.use_transactional_fixtures = true
   config.infer_base_class_for_anonymous_controllers = false
+end
+
+def fixture_path
+  @_fixture_path ||= File.join(File.dirname(__FILE__), 'fixtures')
 end
