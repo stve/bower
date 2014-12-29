@@ -46,6 +46,10 @@ environment = Sprockets::Environment.new
 environment.append_path Bower.environment.directory
 ```
 
+### Additional Tutorials
+
+* [Using Rails+Bower on Heroku](https://gist.github.com/afeld/5704079/)
+
 ## How this gem differs from other techniques
 
 For Rails apps, integrating bower components into `lib/assets` and/or `vendor/assets` seems like the wrong approach. Since bower can support multiple searchpaths, the need to make a distinction between external dependencies and frameworks does not exist. It can all be managed in once place. This gem takes a more opinionated approach and installs components to `bower_components/` in your project's root by default. You can always change it to another location.
