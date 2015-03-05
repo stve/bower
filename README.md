@@ -66,7 +66,7 @@ Pull requests welcome: fork, make a topic branch, commit (squash when possible) 
 
 ## Copyright
 
-Copyright (c) 2013 Steve Agalloco. See [LICENSE](LICENSE.md) for details.
+Copyright (c) 2015 Steve Agalloco. See [LICENSE](LICENSE.md) for details.
 
 [gem]: https://rubygems.org/gems/bower
 [travis]: http://travis-ci.org/stve/bower
