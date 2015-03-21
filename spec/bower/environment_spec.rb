@@ -42,23 +42,23 @@ describe Bower::Environment do
   describe '#run' do
     subject { Bower::Environment.new }
     it 'returns nil when the directory does not exist' do
-      allow(Dir).to receive(:exists?).and_return(false)
+      allow(Dir).to receive(:exist?).and_return(false)
 
       expect(subject.send(:run, 'bower update')).to be_nil
     end
 
     it 'returns nil when the component file does not exist' do
-      allow(Dir).to receive(:exists?).with(subject.directory).and_return(true)
+      allow(Dir).to receive(:exist?).with(subject.directory).and_return(true)
       expect(Dir).to receive(:chdir).with(subject.directory).and_yield
-      allow(File).to receive(:exists?).and_return(false)
+      allow(File).to receive(:exist?).and_return(false)
 
       expect(subject.send(:run, 'bower update')).to be_nil
     end
 
     it 'invokes the shell command wheh the component file exists' do
-      allow(Dir).to receive(:exists?).with(subject.directory).and_return(true)
+      allow(Dir).to receive(:exist?).with(subject.directory).and_return(true)
       allow(Dir).to receive(:chdir).with(subject.directory).and_yield
-      allow(File).to receive(:exists?).and_return(true)
+      allow(File).to receive(:exist?).and_return(true)
       expect(subject).to receive(:`)
 
       expect(subject.send(:run, 'bower update')).to be_nil

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Bower do
-
   describe '.install' do
     it 'invokes install on the environment' do
       expect(Bower.environment).to receive(:install)
@@ -21,5 +20,4 @@ describe Bower do
       expect(Bower.environment).to be_a(Bower::Environment)
     end
   end
-
 end

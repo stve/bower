@@ -3,9 +3,9 @@ require 'securerandom'
 module Bower
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      source_root File.expand_path("../../templates", __FILE__)
+      source_root File.expand_path('../../templates', __FILE__)
 
-      desc "Creates a local configuration file and the default JSON file for Bower to use in your application."
+      desc 'Creates a local configuration file and the default JSON file for Bower to use in your application.'
 
       def create_components_directory
         empty_directory 'bower_components'
@@ -16,7 +16,7 @@ module Bower
       end
 
       def copy_config
-        copy_file "bowerrc", ".bowerrc"
+        copy_file 'bowerrc', '.bowerrc'
       end
     end
   end

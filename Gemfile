@@ -19,6 +19,7 @@ group :test do
   gem "jdbc-sqlite3", :platform => :jruby
   gem 'activerecord-jdbcsqlite3-adapter', :platform => :jruby
   gem 'generator_spec'
+  gem 'rubocop', '>= 0.27'
   gem 'simplecov', :require => false
 end
 

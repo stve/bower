@@ -11,7 +11,7 @@ end
 
 ENV['RAILS_ENV'] ||= 'test'
 
-require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'bower'
 require 'rspec/rails'
 require 'capybara/rspec'
@@ -21,8 +21,8 @@ require 'active_support'
 require 'active_support/core_ext/class/attribute_accessors'
 
 # For generators
-require "rails/generators/test_case"
-require "generators/bower/install_generator"
+require 'rails/generators/test_case'
+require 'generators/bower/install_generator'
 
 Rails.backtrace_cleaner.remove_silencers!
 

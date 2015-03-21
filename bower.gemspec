@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version     = Bower::VERSION
   spec.homepage    = 'https://github.com/stve/bower'
 
-  spec.author      = "Steve Agalloco"
+  spec.author      = 'Steve Agalloco'
   spec.email       = 'steve.agalloco@gmail.com'
   spec.description = 'Bower integration for your ruby projects.'
   spec.summary     = 'Bower integration for your ruby projects.'

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "usage", :type => :feature do
+describe 'usage', type: :feature do
   # let(:dummy_path) { File.expand_path('../../dummy', __FILE__) }
   # let(:components_path) { File.join(dummy_path, 'components') }
 
@@ -18,8 +18,8 @@ describe "usage", :type => :feature do
   #   end
   # end
 
-  it "includes bower assets via Sprockets" do
+  it 'includes bower assets via Sprockets' do
     visit '/assets/application.js'
-    expect(page).to have_content("Coolio = {};")
+    expect(page).to have_content('Coolio = {};')
   end
 end
