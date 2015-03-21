@@ -15,4 +15,6 @@ Gem::Specification.new do |spec|
 
   spec.files = %w(.yardopts CHANGELOG.md LICENSE.md README.md bower.gemspec) + Dir['lib/**/*.rb']
   spec.require_paths = ['lib']
+
+  spec.add_runtime_dependency 'multi_json'
 end
