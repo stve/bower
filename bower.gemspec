@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
   spec.description = 'Bower integration for your ruby projects.'
   spec.summary     = 'Bower integration for your ruby projects.'
 
-  spec.files = %w(.yardopts CHANGELOG.md LICENSE.md README.md bower.gemspec) + Dir['lib/**/*'] 
+  spec.files = %w(.yardopts CHANGELOG.md LICENSE.md README.md bower.gemspec)
+  spec.files += Dir['lib/**/*']
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'multi_json'
