@@ -1,9 +1,11 @@
 AllCops:
   Include:
     - './Rakefile'
-    - 'bower.gemspec'
+    - '**/bower.gemspec'
     - 'lib/**/*.rb'
     - 'spec/**/*.rb'
+  Exclude:
+    - 'pkg/**/*'
 
 Metrics/BlockNesting:
   Max: 2
